@@ -1,3 +1,5 @@
-# trial-01
+# to-do-list-01
 
-its time to check and see if the vscode works
+Hey! This is our first time trying github, django, and participating in a hackathon
+The aim of this project is to create a web based to-do-list 
+
