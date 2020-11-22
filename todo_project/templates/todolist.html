@@ -1,14 +1,28 @@
-<h1>To Do List My</h1>
-<ul>
+<html>
+<title>To do list</title>
+<body style="background-color:peachpuff";>
+<section style="text-align: center">
+<h1 style="color:rgb(247, 8, 8)";><u>My To-do List</u></h1>
+
+<h3 style="color:rgb(207, 99, 135)";>Things to do</h3>
+<ol style="margin-left: 46vw";>
+    
     {% for i in all_items %} 
-    <li>{{i.content}}
+    <li style="text-align: left;">
+        
+        {{i.content}}
         <form action="/deleteTodoItem/{{i.id}}/" method = "post">{% csrf_token %}
-            <input type="submit" value="Delete">
+            <input type="submit" value="Done">
     </form>  
-    </li>
+</li>
     {% endfor %}
-</ul> 
+
+</ol> 
 <form action="/addTodoItem/" method = "post">{% csrf_token %}
     <input type="text" name="content">
-    <input type="submit" value="Add Todo Item">
+    <input type="submit" value="Add Item Todo">
 </form> 
+</section>
+
+</body>
+</html>
